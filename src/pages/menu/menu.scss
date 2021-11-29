@@ -1,0 +1,161 @@
+page-menu {
+    .wrapper {
+        display: inline-block;
+        position: relative;
+    }
+    
+    .hover {
+        position: absolute;
+        top: -18%;
+        left: -5%;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 188, 212, 0);
+        transition: background-color 0.5s;
+    }
+    
+    .hover:hover {
+        background-color: rgba(0, 188, 212, 0.8);
+        // You can tweak with other background properties too (ie: background-image)...
+    }
+
+    .searchbar-md .searchbar-input {
+        padding: 6px 55px;
+        border-radius: 35px !important;
+    }
+
+    .mycard {
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        border-radius: 5px; /* 5px rounded corners */
+    }
+    
+    /* Add rounded corners to the top left and the top right corner of the image */
+    .foodimg {
+        border-radius: 5px 5px 0 0;
+    }
+
+    .searchbar-md .searchbar-input {
+        padding: 3px 55px;
+        border-radius: 35px !important;
+    }
+    .searchbar-md .searchbar-input {
+        height: 2em;
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 3rem;
+        color: rgb(20, 20, 20);
+        background-color: rgb(255, 255, 255);
+        box-shadow: rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.2) 0px 3px 1px -2px, rgba(0, 0, 0, 0.12) 0px 1px 5px 0px;
+        padding: 6px 55px;
+        border-radius: 2px;
+        background-position: left 8px center;
+    }
+
+    .searchbar-md .searchbar-search-icon {
+        left: 16px;
+        top: 7px;
+    }
+
+
+    .containerdiv {
+        position: relative;
+    }
+    
+    .containerText {
+       position: absolute;
+       bottom:   3%;
+       margin-left: 1em;
+       font-size: 0.9em;
+    }
+
+    .txtorange{
+        color: orange;
+    }
+
+    .txtwhite{
+        color:white;
+    }
+
+    .productbox{
+        max-width: 170px;
+        span{
+            text-align: center;
+        }
+        .card-actions{
+            ion-icon{
+                float: right;
+                margin-top: -30px;
+                font-size: 1.6em;
+            }
+            #price{
+                font-weight: 600;
+                font-size:0.9em;
+            }
+        }
+    }
+
+    .product-block{
+        max-width: 18rem;
+        margin: 0 auto;
+    }
+
+    .titlebar{
+        padding: 10px;
+        background-color: rgb(116, 208, 236);
+        color: map-get($colors, dark);
+        font-weight: 600;
+    }
+
+
+
+    .omap {
+        // border: 1px #d8d8d8 dashed;
+        font: 2em/1.6em Arial;
+        position: relative;
+      }
+    
+      .omap::after {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        bottom: 0;
+        left: 0;
+        pointer-events: none;
+        background-image: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255, 1) 90%);
+        width: 100%;
+        height: 2em;
+      }
+    
+      .omap::before {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        bottom: 90;
+        left: 0;
+        pointer-events: none;
+        background-image: linear-gradient(to top, rgba(255,255,255,0), rgba(255,255,255, 1) 90%);
+        width: 100%;
+        height: 2em;
+      }
+
+      .fab-md-light {
+        color: #000;
+        background-color: #fff !important;
+    }
+
+
+    .mybadge{
+        box-shadow: rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.2) 0px 3px 1px -2px, rgba(0, 0, 0, 0.12) 0px 1px 5px 0px;
+        border-radius: 35px !important;
+        padding: 0.3em;
+        width: 8em;
+        position: relative;
+    }
+
+    .item-md.item-block .item-inner {
+        padding-right: 8px;
+        border-bottom: 0px solid #dedede; 
+    }
+    
+}

@@ -1,0 +1,91 @@
+
+  
+  
+  <ion-content class= "profile">
+
+      <div style="margin-bottom: 4em">
+        <p style="margin-left: 1.5em; width: 50%">
+          <span style="font-size: 1.5em;border-right: solid 1px #73380d; font-weight: 100;padding-right: 5px; color: #73380d;">Profile</span>
+          <ion-icon name="close" style="font-size: 2em !important; color: #73380d; margin-right: 15px; float:right;" (tap)="pagepop()"></ion-icon>
+        </p>
+      </div>
+
+  <div class="profile-block">
+    <div class="profile-photo">
+      <img src="{{userimagename}}" id="img" (error)="img.src = defaultphoto" #img alt="profile">
+    </div>
+  </div>
+
+  <ion-row style="margin-top: 3em; border-bottom: solid 2px #d2d2d2;">
+      <ion-col col-2 style="text-align: center;">
+        <ion-icon name="ios-person-outline" style="font-size: 3em !important;color: #2b2b2b;" ></ion-icon>
+      </ion-col>
+      <ion-col col-10>
+          <ion-input type="text" placeholder="surname" [(ngModel)]="surname" value="{{surnamename}}"></ion-input>
+      </ion-col>
+  </ion-row>
+
+  <ion-row style="border-bottom: solid 2px #d2d2d2;">
+      <ion-col col-2 style="text-align: center;">
+      </ion-col>
+      <ion-col col-10>
+          <ion-input type="text" placeholder="othername" [(ngModel)]="othername" value="{{othername}}"></ion-input>
+      </ion-col>
+  </ion-row>
+  
+  <ion-row style="border-bottom: solid 2px #d2d2d2;">
+      <ion-col col-2 style="text-align: center;">
+        <ion-icon name="ios-mail-outline" style="font-size: 3em !important;color: #2b2b2b;" ></ion-icon>
+      </ion-col>
+      <ion-col col-10>
+          <ion-input type="email" placeholder="Email" [(ngModel)]="email" value="{{email}}"></ion-input>
+      </ion-col>
+  </ion-row>
+
+  <ion-row style="border-bottom: solid 2px #d2d2d2;">
+      <ion-col col-2 style="text-align: center;">
+        <ion-icon name="ios-call-outline" style="font-size: 3em !important;color: #2b2b2b;" ></ion-icon>
+      </ion-col>
+      <ion-col col-10>
+          <ion-input type="text" placeholder="Phone Number" [(ngModel)]="phonenumber" value="{{phonenumber}}"></ion-input>
+      </ion-col>
+  </ion-row>
+
+  <!-- <ion-row style="border-bottom: solid 2px #d2d2d2;">
+      <ion-col col-2 style="text-align: center;">
+        <ion-icon name="ios-mail-outline" style="font-size: 3em !important;color: #2b2b2b;" ></ion-icon>
+      </ion-col>
+      <ion-col col-10>
+          <ion-input type="text" placeholder="Email" [(ngModel)]="location" value="{{location}}"></ion-input>
+      </ion-col>
+  </ion-row> -->
+
+  
+
+
+
+
+  
+</ion-content>
+
+
+<ion-footer>
+    <ion-grid style="padding: 0;">
+      <ion-row>
+        <ion-col col-9>
+          <div *ngIf="page_from == drugs">
+            <p style="margin: 0; margin-left: 1em; font-weight: 300;">{{pharm_drugname}}</p>
+            <p style="margin: 0; margin-top: 0.4em;margin-left: 1.5em; font-size: 0.7em;font-weight: 100;">{{pharm_drugdescription}}.</p>
+          </div>
+        </ion-col>
+        <ion-col col-3 style="padding: 0;" (tap)="saveuserinfo()" >
+          <div style="float: right; width: 100%;">
+            <button ion-button full style="margin: 0;height: 5em; background-color: #73380d; width: 100%;">
+              <span style="margin-right: 1em;">Done</span>
+              <ion-icon name="md-checkbox-outline" style="font-size: 2em !important;color: #fff;"></ion-icon></button>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-footer>
+  

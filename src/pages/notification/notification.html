@@ -1,0 +1,28 @@
+  
+  
+  <ion-content>
+
+      <div class="">
+          <ion-icon name="close" style="font-size: 1.5em !important; color: #73380d; margin-right: 15px;  margin-top: 15px; float:right;" (tap)="pagepop()"></ion-icon>
+        </div>
+    
+        <div class="">
+          <p style="margin-left: 1.5em;">
+            <span style="font-size: 1.5em;border-right: solid 1px #73380d; font-weight: 100;padding-right: 5px; color: #73380d;">Notification</span>
+          </p>
+        </div>
+
+    <div class="notibubble" [ngClass]="{new: item.notstatus=='1', read: item.notstatus=='2'}" *ngFor="let item of items" >
+      <div class="top"><ion-icon name="md-notifications"></ion-icon> <span>Stock Update</span></div>
+      <div class="buttom"><span text-wrap>{{item.notdescription}}</span></div>
+      <div class="foot"><button ion-button (tap)="notificationUpdate()">Accept</button></div>
+    </div>
+  
+    <!-- <div class="notibubble read">
+        <div class="top"><ion-icon name="md-notifications"></ion-icon> <span>Stock Update</span></div>
+        <div class="buttom"><span text-wrap>Lorem ipsum dolor, sit amet consectetur adipisicing elit.Natus ex temporibus dignissimos molestiae. Ipsum sunt odit harum eligendi? Repellat!</span></div>
+        <div class="foot"><button ion-button>Accept</button></div>
+      </div> -->
+    <div class="spacer"></div>
+  </ion-content>
+  

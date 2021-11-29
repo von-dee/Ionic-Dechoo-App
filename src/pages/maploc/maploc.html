@@ -1,0 +1,69 @@
+<!--
+  Generated template for the PharmacyPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-content>
+    <div class="">
+      
+      <button class="backbtn"><ion-icon name="ios-arrow-round-back-outline" style="font-size: 2em !important;color: #73380d;margin-left: 15px;  margin-top: 5px;" (tap)="pagepop()"></ion-icon></button>
+      <button class="cancelbtn">cancel</button>
+    </div>
+
+    <div class="">
+      <p style="margin-left: 1.5em; margin-bottom: 3em;" >
+        <span style="font-size: 1.5em;border-right: solid 1px #73380d; font-weight: 100;padding-right: 5px;  color: #73380d;">Map</span>
+        <span style="font-size: 0.7em;font-weight: 100;color: #c3c3c3;margin-left: 10px;">Locate buyer on the map</span>
+      </p>
+    </div>
+
+    <div class="fade">
+      <div #map id="map" style="height: 265px" class="omap"></div>
+    </div>
+
+    <div>
+      <ion-grid style="padding: 0;">
+        <ion-row>
+          <ion-col col-6>
+            <img src="img/footruck.png" alt="" style="">
+          </ion-col>
+          <ion-col col-6>
+            <p style="font-size: 1.5rem;font-weight: 300;color: black;margin-top: 2em;">Delivery </p>
+            <p class="details_P"><span class="details_Span">Buyer  <span style="float: right;margin-right: 6px;padding-top: 2.5px;"> {{resquestor}}</span> </span></p>
+            <p class="details_P"><span class="details_Span">Total Cost  <span style="float: right;margin-right: 6px;padding-top: 2.5px;">{{reqlocation}}</span> </span></p>
+            <p class="details_P"><span class="details_Span">location  <span style="float: right;margin-right: 6px;padding-top: 2.5px;">{{reqtotal}}</span> </span></p>
+          </ion-col>
+          <ion-col col-12>
+              <p style="font-size: 1.3rem;font-weight: 300;color: black;margin-top: 0em;margin-bottom: 0em;">Items List</p>
+              <p *ngFor="let item of items" style="margin-top: 0;">
+                <span class="itemsspan">{{ item.itemname }}</span>
+                <span class="itemsspan">GHS{{ item.itemprice }}</span>
+                <span class="itemsspan">{{ item.itemquantity }}</span>
+              </p>              
+            </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+
+</ion-content>
+
+<ion-footer>
+  <ion-grid style="padding: 0;">
+    <ion-row>
+      <ion-col col-9>
+        <div *ngIf="page_from == drugs">
+          <p style="margin: 0; margin-left: 1em; font-weight: 300;">{{pharm_drugname}}</p>
+          <p style="margin: 0; margin-top: 0.4em;margin-left: 1.5em; font-size: 0.7em;font-weight: 100;">{{pharm_drugdescription}}.</p>
+        </div>
+      </ion-col>
+      <!-- (tap)="callPharmacy()" -->
+      <ion-col col-3 style="padding: 0;" (tap)="callPharmacy()" >
+        <div style="float: right; width: 100%;">
+          <button ion-button full style="margin: 0;height: 5em; background-color: #73380d; width: 100%;"><ion-icon name="md-call" style="font-size: 2em !important;color: #fff;" (tap)="pagepop()"></ion-icon></button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>

@@ -1,0 +1,92 @@
+<!--
+  Generated template for the Cart page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+
+<ion-content>
+
+    <div class="">
+        <ion-icon name="close" style="font-size: 1.5em !important; color: #73380d; margin-right: 15px;  margin-top: 15px; float:right;" (tap)="pagepop()"></ion-icon>
+      </div>
+  
+      <div class="">
+        <p style="margin-left: 1.5em;">
+          <span style="font-size: 1.5em;border-right: solid 1px #73380d; font-weight: 100;padding-right: 5px; color: #73380d;">Request Details</span>
+          <!-- <span style="font-size: 0.8em;font-weight: 100;color: #c3c3c3;">Total <span style="font-size: 1.8em; color: #000;">GHS {{reqtotal}}</span></span> -->
+        </p>
+      </div>
+  
+  
+      <div class="">
+        <ion-grid>
+          <ion-row>
+              <ion-col col-5>
+                <img src="img/person.png" alt="">
+              </ion-col>
+              <ion-col col-7>
+                <ion-row>
+                  <ion-col col-12>
+                    <p style="font-size: 1.7em;font-weight: 100;margin-top: 0.5em; margin-bottom: 0;">{{resquestor}}</p>
+                    <p >@{{reqlocation}}</p>
+                    <p style="font-weight: 100;"><ion-icon name="ios-cart-outline"></ion-icon>&nbsp; GHS {{reqtotal}}</p>
+                  </ion-col>
+                  <!-- <ion-col col-12 style="color: #a0a0a0;">
+                    
+                  </ion-col>
+                  <ion-col col-12>
+                    
+                  </ion-col> -->
+                  </ion-row>
+              </ion-col>
+            </ion-row>
+
+          <ion-row>
+              <p style="margin-left: 1em;"> Cart Item List</p>
+            </ion-row>
+          <!-- *ngFor="let item of cartinfo" -->
+          <ion-row style="border-bottom: 1px solid #f7f7f7;" *ngFor="let item of items">
+              <ion-col col-5>
+                <h6>Name</h6>
+              </ion-col>
+              <ion-col col-4>
+                <h6>Price</h6> 
+             </ion-col>
+              <ion-col col-3 style="text-align: center; padding-top: 0.3em;">
+                <h6>Quantity</h6> 
+              </ion-col>
+            </ion-row>
+
+          <ion-row style="border-bottom: 1px solid #f7f7f7;" *ngFor="let item of items">
+            <ion-col col-5>
+              <p>{{ item.itemname }}</p>
+            </ion-col>
+            <ion-col col-5>
+              <p>GHS{{ item.itemprice }}</p> 
+           </ion-col>
+            <ion-col col-2 style="text-align: center; padding-top: 0.3em;">
+              <p>{{ item.itemquantity }}</p> 
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>  
+</ion-content>
+
+
+<ion-footer>
+    <ion-grid style="padding: 0;">
+      <ion-row>
+        <ion-col col-10>
+
+        </ion-col>
+        <ion-col col-2 style="padding: 0;">
+          <div style="float: right;">
+            <button  (tap)="presentConfirm()"  ion-button full style="margin: 0;height: 3.5em; background-color: #73380d;">Accept <ion-icon name="ios-cart" style="font-size: 2em !important;color: #fff; margin-left: 12px;" (tap)="dismiss()"></ion-icon></button>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-footer>

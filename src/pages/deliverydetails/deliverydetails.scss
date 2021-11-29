@@ -1,0 +1,14 @@
+page-deliverydetails {
+    .pnomargin{
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 1.5em;
+    }
+
+    .footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+        top: -2px;
+        bottom: auto;
+        background-position: left 0 top 0;
+        height: 0;
+    }
+}

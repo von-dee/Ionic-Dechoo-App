@@ -1,0 +1,95 @@
+page-maploc {
+
+    .itemsspan{
+      font-size: 0.7em;
+      margin-right: 2em;
+      color: #9c9c9c;
+    }
+
+    .footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+        top: -2px;
+        bottom: auto;
+        background-position: left 0 top 0;
+        height: 0px;
+      }
+    
+      .scroll {
+           height: 100%
+       }
+    
+      #map {
+         width: 100%;
+         height: 100%;
+     }
+    
+      ol {
+        border: 1px #d8d8d8 dashed;
+        font: 2em/1.6em Arial;
+        position: relative;
+      }
+    
+      ol:after {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        bottom: 0;
+        left: 0;
+        pointer-events: none;
+        background-image: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255, 1) 90%);
+        width: 100%;
+        height: 4em;
+      }
+      
+    
+      .omap {
+        // border: 1px #d8d8d8 dashed;
+        font: 2em/1.6em Arial;
+        position: relative;
+      }
+    
+      .omap::after {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        bottom: 0;
+        left: 0;
+        pointer-events: none;
+        background-image: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255, 1) 90%);
+        width: 100%;
+        height: 2em;
+      }
+    
+      .omap::before {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        bottom: 90;
+        left: 0;
+        pointer-events: none;
+        background-image: linear-gradient(to top, rgba(255,255,255,0), rgba(255,255,255, 1) 90%);
+        width: 100%;
+        height: 2em;
+      }
+    
+    
+      .details_P{
+        margin-top: 0px;margin-bottom: 0;
+      }
+    
+      .details_Span{
+        font-size: 1.2rem;font-weight: 100;color: #bcbcbc;
+      }
+    
+      .cancelbtn{
+        background: transparent;
+        float: right;
+        font-size: 1.2em;
+        font-weight: 100;
+        padding: 0.7em;
+        color: #72380e;
+      }
+
+      .backbtn{
+        background: transparent;
+      }
+}

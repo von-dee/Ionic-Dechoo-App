@@ -1,0 +1,96 @@
+<!--
+  Generated template for the MenuPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-content>
+
+  <ion-row >
+      <ion-col col-6>
+        <p style="font-size: 2.5em;margin-top: 0.5em;font-weight: 100;margin-bottom: 0; color: #73380d;">TheChoo <br> </p>
+      </ion-col>
+      <ion-col col-6>
+          <div class="" (tap)="presentPopover($event);">
+              <img src="img/person.png" height="50" style="float: right;border-radius: 30px;" alt="">
+          </div>
+      </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col col-5>
+      <img src="img/footruck.png" alt="">
+    </ion-col>
+    <ion-col col-7>
+      <ion-row>
+        <ion-col col-12>
+          <p style="font-size: 1.7em;font-weight: 100;margin-top: 0.5em; margin-bottom: 0;">Hello {{firstname}}</p>
+        </ion-col>
+        <ion-col col-7 style="text-align: center;" (tap)="toHistoryPage()">
+          <p class="mybadge" >1 Delivery</p>
+        </ion-col>
+        <ion-col col-5>
+          <ion-item style="top: 0em !important;padding-left: 0px !important;padding-top: 3px; ">
+            <ion-label>Status</ion-label>
+            <ion-toggle [(ngModel)]="isToggled" (ionChange)="changestatus()"></ion-toggle>
+          </ion-item>
+        </ion-col>
+       </ion-row>
+    </ion-col>
+  </ion-row>
+
+  <!-- <ion-row style="margin-top: 1em;">
+      <ion-col col-4>
+          <p style="text-align: center;font-size: 0.8em;" >What would you like?</p>
+        </ion-col>
+        <ion-col col-8 style="text-align: center;">
+          <ion-searchbar [(ngModel)]="terms" style="width: 90%;  margin: 0 auto; float: right;"></ion-searchbar>
+        </ion-col>
+  </ion-row> -->
+
+  <ion-row style="margin-top: 1em;">
+    <p style="font-size: 1.2em; font-weight: 500;font-size: 1.2em;font-weight: 100;margin-left: 0.9rem;" >Delivery Request</p>
+  </ion-row>
+
+  <ion-card *ngFor=" let item of items">
+    <ion-row  (tap)="toRequestPage(item)" >
+      <ion-col col-5>
+        <img src="img/baskets.jpg" alt="">
+      </ion-col>
+      <ion-col col-7>
+        <p style="font-weight: 500 !important; font-size: 1.2em;margin-top: 1em;">{{item.truser}}</p>
+        <p><span style="font-weight: 100;font-size: 0.9em;">@{{item.trlocation}}</span></p>
+        <p>
+          <span style="font-weight: 100;"> <ion-icon name="ios-cart-outline"></ion-icon> &nbsp; GHS {{item.trproductcost}}</span>
+          <span style="float: right;"> 5min ago</span>
+        </p>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+  <!-- <ion-card (tap)="toRequestPage()">
+      <ion-row>
+        <ion-col col-5>
+          <img src="img/baskets.jpg" alt="">
+        </ion-col>
+        <ion-col col-7>
+          <p style="font-weight: 500 !important; font-size: 1.2em;margin-top: 1em;">Vondee Selasie</p>
+          <p><span style="font-weight: 100;font-size: 0.9em;">@Chambers</span></p>
+          <p>
+            <span style="font-weight: 100;"> <ion-icon name="ios-cart-outline"></ion-icon> 5</span>
+            <span style="float: right;"> 5min ago</span>
+          </p>
+        </ion-col>
+      </ion-row>
+    </ion-card> -->
+
+  
+
+  <ion-fab right bottom>
+      <button ion-fab color="light" (tap)="toMaplocPage()">
+        <ion-icon name="ios-cart-outline"></ion-icon>
+      </button>
+  </ion-fab>
+
+</ion-content>

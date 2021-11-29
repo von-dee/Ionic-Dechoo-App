@@ -1,0 +1,28 @@
+  
+  
+  <ion-content>
+
+      <div class="">
+        <ion-icon name="close" style="font-size: 1.5em !important; color: #73380d; margin-right: 15px;  margin-top: 15px; float:right;" (tap)="pagepop()"></ion-icon>
+      </div>
+        
+      <div class="">
+        <p style="margin-left: 1.5em;">
+          <span style="font-size: 1.5em;border-right: solid 1px #73380d; font-weight: 100;padding-right: 5px; color: #73380d;">History</span>
+        </p>
+      </div>
+    
+      <div *ngIf="items==0" class="nodata">No Record<span>(s)</span> Found</div>
+      <div class="titlebar">All Transations</div>
+      <ion-list *ngIf="items">
+        <ion-item *ngFor="let item of items">
+            <h2>{{item.transusername}}</h2>
+            <p>{{item.transdeliveryguy}} - {{currency+item.transtotal}}</p>
+            <ion-note item-end class="note note-ios">
+              <span id="date">{{item.date}}</span>
+              <span id="transcode">{{item.transcode}}</span>
+            </ion-note>
+        </ion-item>
+      </ion-list>
+      </ion-content>
+      
